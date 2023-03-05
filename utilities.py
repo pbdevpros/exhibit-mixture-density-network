@@ -28,7 +28,7 @@ def plot_metric(x, y, title, legends):
     if type(x) != type([]): x = [x]
     if type(y) != type([]): y = [y]
     assert(len(x) == len(y))
-    colors = [ 'g-', 'r-', 'b-']
+    colors = [ 'g*', 'r*', 'b*']
     for i in range(len(x)):
         plt.plot(x[i], y[i], colors[i % len(colors)])
     plt.legend(legends, loc='upper right')
