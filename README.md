@@ -28,8 +28,13 @@ where E is a random variable with distribution betwee (-0.1, 0.1). Calculating `
 
 In fact, a much smaller network can achieve the same output. Following the paper, a network of 1 hidden layer with 4 units with `tanh` activation functions, trained on 1,000 samples (evenly spaced between 0 and 1) for 1,000 epochs. (Note: the Adam optimizer is used here, whereas in the paper the BFGS optimization algorithm is used).
 
-![Approximating `f(x)`](/images/04_1x4tanh_fx_1000samples_1000epochs.png)
+![Approximating `f(x)` with Bishop NN](/images/04_1x4tanh_fx_1000samples_1000epochs.png)
 
 | Hidden Layers | Hidden Layers Depth | Activation | Samples     | Loss | Epochs |
 |--------------|--------------|-----------|------------|------------|------------|
 | 1 | [ 4 ] | tanh | 1,000      | MSE     | 1,000|
+
+We can now consider the "inverse" problem, of predicting the input `x` based on the output `f(x)`. This is essentially flipping the inputs/outputs to the NN and observing if the model can approximated this inverse function. Increasing the depth of the model to 20 units in the hidden layer (the optimally tuned recommendation by Bishop, et. al), it is still not possible (note these results do not replicate Bishop, however it is clear from the paper it is not possible): 
+
+
+![Approximating `x` - backward pass](/images/06_1x20tanh_1000samples_1000epochs.png)
