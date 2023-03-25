@@ -24,7 +24,7 @@ where E is a random variable with distribution betwee (-0.1, 0.1). Calculating `
 
 | Hidden Layers | Hidden Layers Depth | Activation | Samples     | Loss | Epochs |
 |--------------|--------------|-----------|------------|------------|------------|
-| 1 | [ 4 ] | tanh | 1,000      | MSE     | 1,000|  
+|:1:|:[ 4 ]:|:tanh:|: 1,000      :|: MSE     :|: 1,000:|  
 
 </div>
 
