@@ -20,8 +20,11 @@ def plot_histories(histories):
         #  = history.history['accuracy']
         x.append(np.linspace(0, length, length))
         
-    plot_metric(x, y, 'Training loss of CNNs using different loss functions', legends)
+    plot_metric(x, y, 'Training loss of CNNs using different loss functions', [])
 
+def gaussian_2d(mean, sigma):
+    import numpy as np
+    np.random.multivariate_normal(mean, sigma, 10000)
 
 def plot_metric(x, y, title, legends):
     import matplotlib.pyplot as plt
@@ -35,8 +38,6 @@ def plot_metric(x, y, title, legends):
     plt.title(title)
     plt.rcParams["figure.figsize"] = (30, 30)
     plt.grid()
-    # plt.xlim([np.min(x[:]), np.max(x[:])])
-    # plt.ylim([np.min(y[:])*1.5, np.max(y[:])*1.5])
     plt.rc({'font.size': 42})
     plt.show()
 
@@ -48,7 +49,5 @@ def plot_xy(x, y, title, legend):
     plt.title(title)
     plt.rcParams["figure.figsize"] = (30, 30)
     plt.grid()
-    # plt.xlim([np.min(x), np.max(x)])
-    # plt.ylim([np.min(y) np.max(y)])
     plt.rc({'font.size': 42})
     plt.show()
