@@ -155,7 +155,7 @@ def main():
     # tf.compat.v1.enable_eager_execution()
     epochs = 1000
     # train_and_predict_forward_pass(epochs)
-    # train_and_predict_backward_pass(epochs)
-    train_and_predict_MDN(epochs)
+    train_and_predict_backward_pass(epochs)
+    # train_and_predict_MDN(epochs)
 
 main()
