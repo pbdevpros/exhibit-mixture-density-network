@@ -6,7 +6,7 @@ The below is an explanation and discussion of the paper on [Mixed Density Networ
 ## Modeling Outputs as Distributions
 ### Introduction
 
-A nueral networks (NN) can be described as a function approximator. There are some basic functions however where a NN may fail to correctly approximate (even despite experimentation with hyperparameters): where the outputs may be a distribution (i.e. a range of possible outputs).
+As is often mentioned, a neural network (NN) can serve as function approximator. There are some basic functions however where a NN may fail to correctly approximate (even despite experimentation with hyperparameters): where the outputs may be a distribution (i.e. a range of possible outputs).
 
 ### Classic Neural Networks
 
