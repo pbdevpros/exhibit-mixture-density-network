@@ -30,7 +30,6 @@ where E is a random variable with distribution betwee (-0.1, 0.1). Calculating `
 
 ### Mixture Density Networks
 
-We can now consider the "inverse" problem, of predicting the input `x` based on the output `f(x)`. This is essentially flipping the inputs/outputs to the NN and observing if the model can approximated this inverse function. Increasing the depth of the model to 20 units in the hidden layer (the optimally tuned recommendation by Bishop, et. al), it is still not possible (note these results do not replicate Bishop, however it is clear from the paper it is not possible): 
+We can now consider the "inverse" problem, of predicting the input `x` based on the output `f(x)`. This is essentially flipping the inputs/outputs to the NN and observing if the model can approximate this inverse function. The only required change to the network is the loss function - where a mixture of Gaussians are used. Implementing the network as in the paper (where 3 Gaussian kernels are used for the network), we can see the network can predict the results of the "inverse" problem quite well:
 
-
-![Approximating `x` - backward pass](/images/07_1x20_CNN.png)
+![Approximating `x` - MDN](/images/08_MDN_prediction.png)
